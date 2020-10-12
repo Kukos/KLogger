@@ -38,14 +38,14 @@ void example1(void)
     klogger_init(-1, KLOGGER_LEVEL_MAX, KLOGGER_OPTIONS_DEFAULT);
 
     unsigned msg_idx = 1;
-    KLOG_FATAL("First msg\n");
-    KLOG_CRITICAL("Msg %u\n", msg_idx++);
-    KLOG_ERROR("Msg %u\n", msg_idx++);
-    KLOG_WARNING("Msg %u\n", msg_idx++);
-    KLOG_INFO("Msg %u\n", msg_idx++);
-    KLOG_DEBUG("Msg %u\n", msg_idx++);
-    KLOG_DEBUG2("Msg %u\n", msg_idx++);
-    KLOG_DEBUG3("Msg %u\n", msg_idx++);
+    KLOG_FATAL("First msg");
+    KLOG_CRITICAL("Msg %u", msg_idx++);
+    KLOG_ERROR("Msg %u", msg_idx++);
+    KLOG_WARNING("Msg %u", msg_idx++);
+    KLOG_INFO("Msg %u", msg_idx++);
+    KLOG_DEBUG("Msg %u", msg_idx++);
+    KLOG_DEBUG2("Msg %u", msg_idx++);
+    KLOG_DEBUG3("Msg %u", msg_idx++);
 
     klogger_deinit();
 }
@@ -72,14 +72,14 @@ void example2(void)
     klogger_init(-1, KLOGGER_LEVEL_WARNING, KLOGGER_OPTIONS_MULTITHREAD_DEFAULT);
 
     unsigned msg_idx = 1;
-    KLOG_FATAL("First msg\n");
-    KLOG_CRITICAL("Msg %u\n", msg_idx++);
-    KLOG_ERROR("Msg %u\n", msg_idx++);
-    KLOG_WARNING("Msg %u\n", msg_idx++);
-    KLOG_INFO("Msg %u\n", msg_idx++);
-    KLOG_DEBUG("Msg %u\n", msg_idx++);
-    KLOG_DEBUG2("Msg %u\n", msg_idx++);
-    KLOG_DEBUG3("Msg %u\n", msg_idx++);
+    KLOG_FATAL("First msg");
+    KLOG_CRITICAL("Msg %u", msg_idx++);
+    KLOG_ERROR("Msg %u", msg_idx++);
+    KLOG_WARNING("Msg %u", msg_idx++);
+    KLOG_INFO("Msg %u", msg_idx++);
+    KLOG_DEBUG("Msg %u", msg_idx++);
+    KLOG_DEBUG2("Msg %u", msg_idx++);
+    KLOG_DEBUG3("Msg %u", msg_idx++);
 
     klogger_deinit();
 }
@@ -103,14 +103,14 @@ void example3(void)
     klogger_init(-1, KLOGGER_LEVEL_FATAL, KLOGGER_OPTIONS_STDERR_DUPLICATE);
 
     unsigned msg_idx = 1;
-    KLOG_FATAL("First msg\n");
-    KLOG_CRITICAL("Msg %u\n", msg_idx++);
-    KLOG_ERROR("Msg %u\n", msg_idx++);
-    KLOG_WARNING("Msg %u\n", msg_idx++);
-    KLOG_INFO("Msg %u\n", msg_idx++);
-    KLOG_DEBUG("Msg %u\n", msg_idx++);
-    KLOG_DEBUG2("Msg %u\n", msg_idx++);
-    KLOG_DEBUG3("Msg %u\n", msg_idx++);
+    KLOG_FATAL("First msg");
+    KLOG_CRITICAL("Msg %u", msg_idx++);
+    KLOG_ERROR("Msg %u", msg_idx++);
+    KLOG_WARNING("Msg %u", msg_idx++);
+    KLOG_INFO("Msg %u", msg_idx++);
+    KLOG_DEBUG("Msg %u", msg_idx++);
+    KLOG_DEBUG2("Msg %u", msg_idx++);
+    KLOG_DEBUG3("Msg %u", msg_idx++);
 
     klogger_deinit();
 }
@@ -171,14 +171,14 @@ void example4(void)
         klogger_init(log_socket, KLOGGER_LEVEL_DEBUG, 0);
 
         unsigned msg_idx = 1;
-        KLOG_FATAL("First msg\n");
-        KLOG_CRITICAL("Msg %u\n", msg_idx++);
-        KLOG_ERROR("Msg %u\n", msg_idx++);
-        KLOG_WARNING("Msg %u\n", msg_idx++);
-        KLOG_INFO("Msg %u\n", msg_idx++);
-        KLOG_DEBUG("Msg %u\n", msg_idx++);
-        KLOG_DEBUG2("Msg %u\n", msg_idx++);
-        KLOG_DEBUG3("Msg %u\n", msg_idx++);
+        KLOG_FATAL("First msg");
+        KLOG_CRITICAL("Msg %u", msg_idx++);
+        KLOG_ERROR("Msg %u", msg_idx++);
+        KLOG_WARNING("Msg %u", msg_idx++);
+        KLOG_INFO("Msg %u", msg_idx++);
+        KLOG_DEBUG("Msg %u", msg_idx++);
+        KLOG_DEBUG2("Msg %u", msg_idx++);
+        KLOG_DEBUG3("Msg %u", msg_idx++);
 
         klogger_deinit();
         close(log_socket);

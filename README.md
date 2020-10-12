@@ -19,6 +19,7 @@ $make example
 ## Features
 KLogger is a almost full user customizable logging C library. By passing main file descriptor and predefined options you can set logging system as you want.
 * Auto file generation + logging into this file when option is set.
+* Auto new line detection. When you have forgotten new line in print, framework will add it by itself. But if you pass new line, them no new additional line will be added.
 * Logging on a few descriptors at the same time, at most 4 descriptors: main fd, stdout, stderr, file
 * Setting any valid descriptor as a main fd. You can set socket as a main fd
 * Library is full multithread safe, but it requires pthread library. Your code needs pthread also to compile it with this library

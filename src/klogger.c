@@ -300,6 +300,13 @@ void __attribute__(( format(printf, 5, 6) )) __klogger_print(const char* file,
 
     va_end(args);
 
+    /* User has forgotten new line add for him */
+    if (buffer[buffer_index - 1] != '\n' && buffer_index < sizeof(buffer) - 1)
+    {
+        buffer[buffer_index++] = '\n';
+        buffer[buffer_index] = '\0';
+    }
+
     /* FATAL, user should close app, log stacktrace */
     if (level == KLOGGER_LEVEL_FATAL)
         buffer_index += __klogger_write_stacktrace(&buffer[buffer_index], sizeof(buffer) - buffer_index);
